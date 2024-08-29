@@ -11,7 +11,13 @@ RUN go mod download
 
 COPY . .
 
-RUN make linux_build
+ARG LOCAL_UI_MODULE="false"
+
+RUN if [ "${LOCAL_UI_MODULE}" = "true" ]; then \
+      make replace_ui_module_with_local_path; \
+    fi; \
+    make linux_build;
+
 
 FROM alpine:latest
 # 解决go 时区和https请求证书错误问题

@@ -8,7 +8,7 @@ replace (
 )
 
 require (
-	github.com/punmin/etcd-manage-ui/tpls v1.0.0
+	github.com/punmin/etcd-manage-ui v1.0.0
 )
 
 require (
