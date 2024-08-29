@@ -10,8 +10,8 @@ linux_build:
 windows_build: 
 	@CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o ./bin/ems.exe ./
 
-docker_build: linux_build
-	docker build -t shiguanghuxian/etcd-manage .
+docker_build: 
+	docker build -t etcd-manage .
 
 docker_run: docker_build
 	docker-compose up --force-recreate

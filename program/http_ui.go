@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/etcd-manage/etcd-manage-server/program/logger"
-	"github.com/etcd-manage/etcd-manage-ui/tpls"
 	gin "github.com/gin-gonic/gin"
+	"github.com/punmin/etcd-manage-ui/tpls"
 )
 
 // ui 界面
